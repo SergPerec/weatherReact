@@ -1,9 +1,8 @@
-import React from 'react';
-import  Search  from './Search/Search';
+// import  Search  from './Search/Search';
 
 function Weather() {
   return <div className="container">
-    <Search />
+    {/* <Search /> */}
   </div>;
 }
 
