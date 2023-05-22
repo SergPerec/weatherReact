@@ -1,12 +1,12 @@
-const weatherUrlTypes = {
+export const urlWeatherTypes = {
     currentWeather: 'currentWeather',
-    forcastWeather: 'forcastWeather',
+    forecastWeather: 'forecastWeather'
 };
 
 export const createUrlWeather = (city: string, type: string): string => {
     const apiKey = '7510f7f4f850f3de4ccfa3409edd947b';
     const url = 'https://api.openweathermap.org/data/2.5/';
-    if (type === weatherUrlTypes.currentWeather) {
+    if (type === urlWeatherTypes.currentWeather) {
         return `${url}weather?q=${city}&appid=${apiKey}&lang=ru`
     } else {
         return `${url}forecast?q=${city}&appid=${apiKey}&lang=ru`
