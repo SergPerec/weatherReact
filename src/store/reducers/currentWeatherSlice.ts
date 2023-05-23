@@ -28,7 +28,7 @@ export const getCurrentWeather = createAsyncThunk<
         disputch: AppDispatch;
         state: IRootState;
     }
->('getCurrentWeather', async (cityName, thinkAPI) => {
+>('getCurrentWeather', async (cityName, thunkAPI) => {
     const urlWeather = createUrlWeather(cityName, urlWeatherTypes.currentWeather);
     try {
         const response = await fetch(urlWeather);
@@ -37,11 +37,11 @@ export const getCurrentWeather = createAsyncThunk<
             return transformWeather(data);
         } else {
             const error = await response.json();
-            return thinkAPI.rejectWithValue(error?.message);
+            return thunkAPI.rejectWithValue(error?.message);
         }
     } catch (error) {
         console.log(error);
-        return thinkAPI.rejectWithValue(error);
+        return thunkAPI.rejectWithValue(error);
     }
 })
 

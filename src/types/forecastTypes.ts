@@ -14,15 +14,15 @@ export interface Coord {
 	lon: number;
 }
 
-export interface IForcastWeather {
+export interface IForecastWeather {
 	cod: string;
 	message: number;
 	cnt: number;
 	city: string;
-	list: IForcastWeatherNormalized[];
+	list: IForecastWeatherNormalized[];
 }
 
-export interface IForcastWeatherNormalized {
+export interface IForecastWeatherNormalized {
 	dt: number;
 	visipility: number;
 	pop: number;

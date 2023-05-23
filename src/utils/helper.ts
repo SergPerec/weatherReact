@@ -1,5 +1,5 @@
-import { IForcastWeather, IForcastWeatherNormalized } from "../types/forecastTypes";
-import { IStatistic } from "../types/statistic";
+import { IForecastWeather, IForecastWeatherNormalized } from "../types/forecastTypes";
+import { IStatistic } from "../types/otherTypes";
 import { ICurrentWeather, ICurrentWeatherNormalize } from "../types/weatherTypes";
 
 export const transformWeather = (data: ICurrentWeather): ICurrentWeatherNormalize => {
@@ -69,7 +69,7 @@ export function translateWeather(weatherFromDate: string): string {
     return weather[weatherFromDate];
 }
 
-export const transformForecast = (dataForecast: IForcastWeather): IForcastWeatherNormalized[] => {
+export const transformForecast = (dataForecast: IForecastWeather): IForecastWeatherNormalized[] => {
     return dataForecast.list;
 };
 
