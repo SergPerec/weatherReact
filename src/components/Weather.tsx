@@ -1,9 +1,11 @@
-// import  Search  from './Search/Search';
+import  Search  from './Weather/Search/Search';
+import  Main  from './Weather/Main/Main';
 
 function Weather() {
   return <div className="container">
-    {/* <Search /> */}
-  </div>;
+    <Search />
+    <Main />
+  </div>
 }
 
 export default Weather;
