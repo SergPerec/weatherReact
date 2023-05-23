@@ -1,0 +1,15 @@
+.container {
+    font-size: 20;
+    padding: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.count {
+    color: rgb(87, 75, 156);
+    margin-bottom: 10px;
+    text-align: center;
+}

@@ -3,7 +3,7 @@ import './App.css';
 import { ROUTES } from './routes/routes';
 import { HashRouter, Route, Navigate, Routes } from 'react-router-dom';
 import Help from './components/Help';
-import Stats from './components/Stats';
+import Stats from './components/Stats/Stats';
 import Navbar from './components/Navbar/Navbar';
 import { useAppDispatch } from './store/store';
 import { useSelector } from 'react-redux';
