@@ -1,0 +1,15 @@
+.forecast-city-name {
+  height: 68px;
+  padding-left: 18px;
+  padding-bottom: 7px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.forecast-list {
+  padding-left: 18px;
+  padding-right: 18px;
+  font-size: 18px;
+  height: 274px;
+  overflow: scroll;
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import BlockNowNew from './Tabs/BlockNowNew/BlockNowNew';
 import BlockDetails from './Tabs/BlockDetails/BlockDetails';
+import BlockForecast from './Tabs/BlockForecast/BlockForecast';
 
 const Tabs = () => {
   const tabs = {
@@ -19,6 +20,9 @@ const Tabs = () => {
         </div>
         <div className={`tab-content ${activeTab === tabs.details ? 'active' : ''}`}>
           <BlockDetails />
+        </div>
+        <div className={`tab-content ${activeTab === tabs.forecast ? 'active' : ''}`}>
+          <BlockForecast />
         </div>
       </div>
     </div>
