@@ -19,17 +19,18 @@ const App = () => {
   const dispatch = useAppDispatch();
   const { currentCity, currentWeather } = useSelector(selectorCurrentWeatherSlice);
 
+
   useEffect(() => {
     dispatch(getCurrentWeather(currentCity));
     dispatch(getForecastWeather(currentCity));
-  });
+  },[]);
 
   useEffect(() => {
     if (currentWeather) {
       dispatch(addDataForRequestCounter());
       dispatch(addForTopOneCity(currentCity));
     }
-  });
+  }, [currentCity]);
 
   return (
     <div className="wrapper">

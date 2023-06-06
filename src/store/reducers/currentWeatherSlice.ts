@@ -25,15 +25,17 @@ export const getCurrentWeather = createAsyncThunk<
     ICurrentWeatherNormalize,
     string,
     {
-        disputch: AppDispatch;
+        dispatch: AppDispatch;
         state: IRootState;
     }
 >('getCurrentWeather', async (cityName, thunkAPI) => {
     const urlWeather = createUrlWeather(cityName, urlWeatherTypes.currentWeather);
+    
     try {
         const response = await fetch(urlWeather);
         if (response.ok) {
             const data = await response.json();
+            
             return transformWeather(data);
         } else {
             const error = await response.json();
