@@ -1,0 +1,33 @@
+.block-links {
+  height: 45px;
+  display: flex;
+  line-height: 45px;
+}
+
+.tab-links {
+  font-size: 18px;
+  flex: 0 0 33.333%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-links:nth-child(1) {
+  box-sizing: border-box;
+  border-right: 1px solid #000000;
+}
+
+.tab-links:nth-child(2) {
+  box-sizing: border-box;
+  border-right: 1px solid #000000;
+}
+
+.tab-links:hover {
+  background-color: rgb(223, 223, 223);
+  transition: background-color 0.5s ease 0s;
+}
+
+.tab-links.active {
+  background-color: #000;
+  transition: none;
+  color: #fff;
+}
