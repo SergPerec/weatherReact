@@ -1,0 +1,19 @@
+.details-city-name {
+    height: 68px;
+    padding-left: 18px;
+    padding-bottom: 7px;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .details-list {
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 18px;
+    overflow: scroll;
+    height: 274px;
+  }
+  
+  .details-item {
+    margin-bottom: 20px;
+  }

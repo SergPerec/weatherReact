@@ -1,0 +1,49 @@
+.tab-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.now-temperature {
+  flex: 1 1 33.333%;
+  font-size: 70px;
+  padding-left: 23px;
+  padding-top: 23px;
+}
+
+.now-sky {
+  margin: 0 auto 0 auto;
+}
+
+.picture-weather {
+  width: 160px;
+  height: 160px;
+}
+
+.now-city {
+  flex: 1 1 33.333%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 12px;
+  padding-bottom: 17px;
+  padding-right: 26px;
+}
+
+.favorite-button {
+  opacity: 0.54;
+  fill: none;
+  cursor: pointer;
+}
+.favorite-button:hover {
+  opacity: 0.8;
+}
+.favorite-button:active {
+  opacity: 0.8;
+}
+
+.favorite-button.checked {
+  fill: #000;
+  opacity: 0.8;
+}
