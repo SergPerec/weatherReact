@@ -45,13 +45,15 @@ const BlockNowNew = () => {
       <div className="now-sky">
         {icon && <img className="picture-weather" src={createUrlImage(icon, urlImageSizes.four)} />}
       </div>
-      <div className="now-city">
-        <div className="now-city-name">{cityName}</div>
-      </div>
-      <div
-        onClick={() => getFavoriteCities(cityName)}
-        className={`favorite-button ${favoriteCities.includes(cityName) ? 'checked' : ''}`}>
-        <ImgHeart />
+      <div className="favorite-item">
+        <div className="now-city">
+          <div className="now-city-name">{cityName}</div>
+        </div>
+        <div
+          onClick={() => getFavoriteCities(cityName)}
+          className={`favorite-button ${favoriteCities.includes(cityName) ? 'checked' : ''}`}>
+          <ImgHeart />
+        </div>
       </div>
     </div>
   );

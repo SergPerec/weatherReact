@@ -34,8 +34,7 @@ export const getCurrentWeather = createAsyncThunk<
     try {
         const response = await fetch(urlWeather);
         if (response.ok) {
-            const data = await response.json();
-            
+            const data = await response.json();      
             return transformWeather(data);
         } else {
             const error = await response.json();
@@ -62,7 +61,7 @@ export const currentWeatherSlice = createSlice({
             (state, { payload }: PayloadAction<ICurrentWeatherNormalize>) => {
                 state.currentWeather = payload;
                 state.currentCity = payload.cityName;
-                state.isLoading = true;
+                state.isLoading = false;
                 state.isSuccess = false;
             });
         builder.addCase(getCurrentWeather.rejected,
